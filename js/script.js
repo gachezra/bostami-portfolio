@@ -27,6 +27,9 @@ function handleDarkMode() {
 
 }
 
+// Trigger dark mode when the page loads
+handleDarkMode();
+
 darkmode.addEventListener("click", handleDarkMode)
 // Dark mode end ===================
 
