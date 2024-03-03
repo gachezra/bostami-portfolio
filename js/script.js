@@ -193,3 +193,21 @@ $(".brand_slider").slick({
 
 
 })
+
+/*Emailjs config*/
+
+const contactForm = document.getElementById('myForm')
+const contactMessage = document.getElementById('message')
+
+const sendEmail = (e) =>{
+  e.preventDefault()
+
+  emailjs.sendForm('service_93086rd', 'template_72uqk75', '#myForm', 'I0XS-SC7a7aHRFllO')
+    .then(()=>{
+      contactMessage.textContent = 'Message Sent 👍'
+    }, () => {
+      contactMessage.textContent = 'Error sending message ❌'
+    })
+}
+
+contactForm.addEventListener('submit', sendEmail)
