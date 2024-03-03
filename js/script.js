@@ -205,6 +205,12 @@ const sendEmail = (e) =>{
   emailjs.sendForm('service_93086rd', 'template_72uqk75', '#myForm', 'I0XS-SC7a7aHRFllO')
     .then(()=>{
       contactMessage.textContent = 'Message Sent 👍'
+
+      setTimeout(() => {
+        contactMessage.textContent = ''
+      }, 5000)
+      //cleqr
+      contactForm.reset()
     }, () => {
       contactMessage.textContent = 'Error sending message ❌'
     })
